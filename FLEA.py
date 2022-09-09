@@ -941,7 +941,7 @@ def parse_arguments():
     parser.add_argument('--nsources', '-n', type=int, default=5, help="Number of sources (N)")
     parser.add_argument('--nclean', '-K', type=int, default=None, help="Number of unperturbed sources to assume (default: N/2+1 )")
     parser.add_argument('--nadv', '-N', type=int, default=None, help="Number of perturbed sources (default: (N-1)/2 ) )")
-    parser.add_argument('--adversary', '-a', type=str, default='flip#protected#target', help="Adversary type")
+    parser.add_argument('--adversary', '-a', type=str, default='none', help="Adversary type")
     parser.add_argument('--eta', '-e', type=float, default=0.5, help="Accuracy/fairness tradeoff (default: 0.5)")
     parser.add_argument('--t', '-t', type=float, default=-2, help="Outer tilting parameter for hierarchical TERM (default: -2)")
     parser.add_argument('--tau', '-T', type=float, default=2, help="Inner tilting parameter for hierarchical TERMs (default: 2)")
