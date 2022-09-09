@@ -21,8 +21,8 @@ results_path = './results/'
 
 all_nsources = {'adult':[(5,2)], 'compas':[(5,2)], 'drugs':[(5,2)], 'germancredit':[(5,2)], 'folktables':[(51,5),(51,10),(51,15),(51,20),(51,25)]} 
 
-#extra=''
-extra='-cxgboost'
+extra=''
+#extra='-cxgboost'
 
 if extra == '-cxgboost': 
     all_fairalgo = ['none','resample']   # nonlinear classifier 
