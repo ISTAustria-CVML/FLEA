@@ -3,8 +3,8 @@
 
 Code and example data for paper [E. Iofinova, N. Konstantinov, C. H. Lampert. "FLEA: Provably Robust Fair Multisource Learning from Unreliable Training Data"](https://arxiv.org/abs/2106.11732), Transactions of Machine Learning (TMLR), Sep 2022.
 
-## Prerequisites
-Python ≥3.6, jax, numpy, optax, pandas, scikit-learn, scipy, folktables (optional), xgboost (optional)
+## Prerequisites (versions indicate tested setup, not minimal requirements)
+Python(3.10), jax(0.3.14), numpy(1.23.1), optax(0.1.2), pandas(1.4.2), scikit-learn(1.1.1), scipy(1.8.1), folktables (0.0.11;optional), xgboost (1.6.1;optional)
 
 ## Data preprocessing
 Preprocessed versions of the `adult`, `compas`, `drugs` and `germancredit` dataset are included in the `data/` directory.
