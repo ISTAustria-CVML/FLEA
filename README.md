@@ -23,7 +23,7 @@ All experiments are run using the `FLEA.py` script. Command line options are:
 for additional technical arguments, see the source code.
 
 Each run of `FLEA.py` creates one split of the data with the selected
-manipulations and then runes all activated ones of the following methods 
+manipulations and then runs all selected ones of the following methods 
 (default: all):
 * `original`: train on original data before any manipulation (hypothetical)
 * `clean`: merge the clean data sources and train on result (oracle)
@@ -39,6 +39,7 @@ where possible, training is performed with four different base learners:
 * `fair_pp`: postprocessing-based fairness
 * `fair_adv`: adversarial fairness
 * `fair_resample`: preprocessing (resampling)-based fairness
+* `fair_none`: fairness-unaware 
 
 Note: not all combinations are possible. Impossible ones will simply be skipped.
 
@@ -48,7 +49,7 @@ Note: not all combinations are possible. Impossible ones will simply be skipped.
 * `shuffle#X`: shuffle values of attribute `X` 
 * `copy#X#Y`: copy values of attribute `X` to attribute `Y`
 * `resample#A`: upsample data with combinations (target=1 and protected=A) and downsample (target=1 and protected=1-A)
-* `randomanchor#A`: perform anchor manipulation, see paper
+* `randomanchor#A`: perform anchor-based manipulation, see paper
 * `random`: pick random data manipulation for each source
 
 attributes `X` and `Y` can be `target` or `protected`. values for `A` can be `0` or `1`.
@@ -77,7 +78,9 @@ the protected groups.
 The script `plot_results.py` creates bar plots of the results 
 as in the manuscript and outputs tables in LaTeX format. 
 It expects results from runs with all adversaries for random 
-seeds 0,...,9 in a subdirectory `./results`
+seeds 0,...,9 in a subdirectory `./results` for the linear 
+classifiers or  `./results-cxgboost` for the xgboost 
+classifiers.
 
 ### BibTex:
 ```
