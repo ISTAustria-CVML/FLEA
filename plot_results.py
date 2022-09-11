@@ -17,10 +17,10 @@ sns.set_theme(style="whitegrid")
 
 figsize=(16, 3.6)
 
-results_path = './results/'
-
 extra='' 
 #extra='-cxgboost' # different filenames for results of non-linear classifier
+
+results_path = f'./results{extra}/'
 
 if extra == '-cxgboost': 
     all_fairalgo = ['none','resample']   # only some combinations possible for nonlinear classifier 
@@ -35,7 +35,7 @@ else:
                     'resample':['voting','TERM','konstantinov','FLEA']}
 
 filepattern = results_path+'{dataset}-n{nsources}-N{nadv}-a{adversary}'+extra+'-s{seed}.txt'
-imagepattern = results_path+'/suppl-{dataset}-n{nsources}-N{nadv}-{classifier}'+extra+'{suffix}'
+imagepattern = results_path+'{dataset}-n{nsources}-N{nadv}-{classifier}'+extra+'{suffix}'
 
 all_nsources = {'adult':[(5,2)], 'compas':[(5,2)], 'drugs':[(5,2)], 'germancredit':[(5,2)], 'folktables':[(51,5),(51,10),(51,15),(51,20),(51,25)]} 
 if extra == '-cxgboost': 
@@ -259,16 +259,12 @@ def main():
               print("Empty file?", filename, file=sys.stderr)
           data[adv] = pd.concat(data[adv], axis=0) # 10 seeds in 1 dataframe
         
-        print("fairalgo=",fairalgo, file=sys.stderr)
+        print("% fairalgo=", fairalgo, file=sys.stderr)
         do_plot(data, dataset, fairalgo, n, nadv)
         
-        imagefile = imagepattern.format(dataset=dataset, nsources=n, classifier=f'fair-{fairalgo}', nadv=nadv, suffix='.svg')
+        imagefile = imagepattern.format(dataset=dataset, nsources=n, classifier=f'fair-{fairalgo}', nadv=nadv, suffix='.pdf')
         print("Saving to", imagefile, file=sys.stderr)
         plt.savefig(imagefile)
-        imagefile = imagepattern.format(dataset=dataset, nsources=n, classifier=f'fair-{fairalgo}', nadv=nadv, suffix='.pdf')
-        print("Also saving to", imagefile, file=sys.stderr)
-        plt.savefig(imagefile)
-        plt.close()
       print("\\\\\\hline")
       print("\\end{tabular}")
       print("\\end{subfigure}")
