@@ -24,4 +24,4 @@ In practice, the assumptions in FLEA are not exactly met - in particular, sample
 
 
 ## Code Structure
-The source code and documentation can be found in the !(src) directory. 
+The source code and documentation can be found in the [src](src/) directory. 
