@@ -8,7 +8,8 @@
   title = "{FLEA}: Provably Robust Fair Multisource Learning from Unreliable Training Data",
   journal = "Transactions on Machine Learning Research (TMLR)",
   year = 2022,
-}```
+}
+```
 
 ## FLEA - Fair LEarning against Adversaries
 
