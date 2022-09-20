@@ -1,7 +1,7 @@
 # FLEA: Provably Robust Fair Multisource Learning from Unreliable Training Data
 [Paper](https://arxiv.org/pdf/2106.11732.pdf)
 
-##FLEA - Fair LEarning against Adversaries
+## FLEA - Fair LEarning against Adversaries
 
 ![image](FLEA-diagram-wide.png)
 
