@@ -1,8 +1,8 @@
 # FLEA: Provably Robust Fair Multisource Learning from Unreliable Training Data
 
-Eugenia Iofinova and Nikola Konstantinov and Christoph H. Lampert: "FLEA: Provably Robust Fair Multisource Learning from Unreliable Training Data", Transactions on Machine Learning Research (TMLR), 2022.
+Eugenia Iofinova and Nikola Konstantinov and Christoph H. Lampert. *"FLEA: Provably Robust Fair Multisource Learning from Unreliable Training Data",* Transactions on Machine Learning Research (TMLR), 2022.
 
-[arXiv](https://arxiv.org/pdf/2106.11732.pdf), [OpenReview](https://openreview.net/forum?id=XsPopigZXV)  [TMLR - coming soon](.)
+manuscript: [arXiv](https://arxiv.org/pdf/2106.11732.pdf), [OpenReview](https://openreview.net/forum?id=XsPopigZXV),  [TMLR - coming soon](.)
 
 ```bibtex
 @article{iofinova-tmlr2022,
